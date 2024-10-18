@@ -1,0 +1,90 @@
+  div{
+    font-family: inherit;
+  }
+  
+
+  
+  div.sb-container {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 150px;
+    padding: 1px 16px;
+  }
+
+  .blog-feat-img{
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+  }
+
+  .blog-details{
+    margin: 25px 0px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .blog-details span{
+    margin-left: 10px;
+  }
+  
+  @media screen and (max-width: 600px) {
+
+    div.sb-container {
+      margin-left: 0 0 0 0;
+    }
+  }
+
+  
+  /* blog-header/Blog Title */
+
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .blog-left {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .blog-right {
+    float: left;
+    width: 25%;
+    padding-left: 1rem;
+  }
+  
+  /* Fake image */
+  .blog-fake-img {
+    background-color: #aaa;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 20px;
+    border-radius: 15px;
+  }
+  
+  /* Add a card effect for articles */
+  .blog-card {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Clear floats after the columns */
+  .blog-container:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .blog-left,
+    .blog-right {
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
