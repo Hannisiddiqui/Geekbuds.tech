@@ -43,17 +43,6 @@
   
   /* Create two unequal columns that floats next to each other */
   /* Left column */
-  .blog-left {
-    float: left;
-    width: 75%;
-  }
-  
-  /* Right column */
-  .blog-right {
-    float: left;
-    width: 25%;
-    padding-left: 1rem;
-  }
   
   /* Fake image */
   .blog-fake-img {
