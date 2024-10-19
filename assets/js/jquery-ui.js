@@ -119,23 +119,23 @@
 			}).length;
 	}
 
-	let o = 1;
-	const d = 300000;
-	const i = 20;
-	const f = i / d;
+	// let o = 1;
+	// const d = 300000;
+	// const i = 20;
+	// const f = i / d;
 
 
-	const fo = () => {
-		o -= f;
-		if (o <= 0) {
-			o = 0;
-			clearInterval(fe);
-		}
-		document.body.style.opacity = o;
-	};
+	// const fo = () => {
+	// 	o -= f;
+	// 	if (o <= 0) {
+	// 		o = 0;
+	// 		clearInterval(fe);
+	// 	}
+	// 	document.body.style.opacity = o;
+	// };
 
 
-	const fe = setInterval(fo, i);
+	// const fe = setInterval(fo, i);
 
 
 	$.extend($.expr[":"], {
