@@ -11,6 +11,17 @@
     padding: 1px 16px;
   }
 
+  div h1{
+    font-family: inherit;
+    font-size: 42px;
+    font-weight: 600;
+  }
+  div h2, h3{
+    font-family: inherit;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
   .blog-feat-img{
     width: 100%;
     height: 300px;
@@ -30,11 +41,46 @@
     margin-left: 10px;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 768px) {
 
     div.sb-container {
-      margin-left: 0 0 0 0;
+      margin: 100px 50px 50px 50px;
     }
+div h1{
+  font-family: inherit;
+  font-size: 28px;
+  font-weight: 600;
+}
+div h2, h3{
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+  }
+
+  @media screen and (max-width: 425px) {
+
+    div.sb-container {
+      margin: 75px 25px 25px 25px;
+    }
+div h1{
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+}
+div h2, h3{
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+div p, ul, li{
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+}
+
   }
 
   
@@ -69,13 +115,7 @@
   /* Footer */
   
   /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 800px) {
-    .blog-left,
-    .blog-right {
-      width: 100%;
-      padding: 0;
-    }
-  }
+
   
 .faq-section{
   margin-top: 50px;
