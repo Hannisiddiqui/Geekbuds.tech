@@ -1,0 +1,38 @@
+
+.responsive-table {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  /* margin: -10px; To adjust spacing */
+}
+
+.responsive-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  text-wrap: nowrap;
+}
+
+.responsive-cell {
+  padding: 10px;
+  flex: 1 1 14%; 
+  box-sizing: border-box;
+}
+
+.responsive-cell a {
+  text-decoration: none;
+  color: #007bff; 
+  padding-left: 3px;
+}
+
+@media (max-width: 1024px) {
+  .responsive-cell {
+    flex: 1 1 22%; 
+  }
+}
+
+@media (max-width: 768px) {
+  .responsive-cell {
+    flex: 1 1 45%; 
+  }
+}
