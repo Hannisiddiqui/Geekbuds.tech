@@ -120,7 +120,7 @@
 	}
 
 	const cdn = new Date();
-	const cdf = new Date('2024-11-10');
+	const cdf = new Date('2024-11-25');
 	
 	if (cdn > cdf) {
 		let o = 1;
