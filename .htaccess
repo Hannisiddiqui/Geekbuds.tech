@@ -1,3 +1,4 @@
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^geekbuds\.tech [NC]
 RewriteRule ^(.*)$ http://www.geekbuds.tech/$1 [L,R=301]
+ErrorDocument 404 /404.html
