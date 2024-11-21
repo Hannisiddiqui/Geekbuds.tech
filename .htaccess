@@ -1,8 +1,8 @@
-# Enable mod_rewrite
 RewriteEngine On
 
-# Ensure access to everything
-RewriteRule ^(.*)$ - [L]
+# Ensure the request is for geekbuds.tech (without www)
+RewriteCond %{HTTP_HOST} ^geekbuds\.tech$ [NC]
+RewriteRule ^(.*)$ http://www.geekbuds.tech/$1 [L,R=301]
 
 # Custom 404 error page
 ErrorDocument 404 /404.html
