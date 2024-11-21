@@ -2,3 +2,4 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^geekbuds\.tech [NC]
 RewriteRule ^(.*)$ http://www.geekbuds.tech/$1 [L,R=301]
 ErrorDocument 404 /404.html
+Redirect to HTTPS RewriteCond %{HTTPS} off RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] # Set default index file DirectoryIndex index.php index.html # Handle 403 errors ErrorDocument 403 /403.html # Deny access to certain files <FilesMatch "\.(htaccess|htpasswd|ini|phps|fla|psd|log|sh|sql)$"> Order Allow,Deny Deny from all </FilesMatch> 
