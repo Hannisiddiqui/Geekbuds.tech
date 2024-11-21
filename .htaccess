@@ -1,6 +1,4 @@
-Enable Rewrite Engine RewriteEngine On 
-Redirect non-www to www with HTTPS RewriteCond %{HTTPS} off [OR] 
-RewriteCon %{HTTP_HOST} !^www\. [NC] 
-RewriteCond %{HTTP_HOST} ^(.*)$ [NC] 
-RewriteRule ^(.*)$ https://www.%1/$1 [L,R=301] 
-Custom 404 Error Page ErrorDocument 404 /404.html
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^geekbuds\.tech [NC]
+RewriteRule ^(.*)$ http://www.geekbuds.tech/$1 [L,R=301]
+ErrorDocument 404 /404.html
