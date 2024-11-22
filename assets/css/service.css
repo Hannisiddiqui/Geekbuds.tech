@@ -29,6 +29,8 @@
 
   .blog-feat-img{
     width: 100%;
+    background-size: cover;
+    background-position: center center;
     height: 300px;
     object-fit: contain;
     background-repeat: no-repeat;
