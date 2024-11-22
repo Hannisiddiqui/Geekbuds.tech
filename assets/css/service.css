@@ -31,8 +31,8 @@
     width: 100%;
     background-size: cover;
     background-position: center center;
-    height: 300px;
-    object-fit: contain;
+    height: 500px;
+    /* object-fit: contain; */
     background-repeat: no-repeat;
     border-radius: 15px;
   }
