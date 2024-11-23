@@ -83,6 +83,15 @@
       })(window, document, "script", "dataLayer", "GTM-N32XDCQH");
     </script>
     <!-- End Google Tag Manager -->
+      <style>
+        .error_message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+      </style>
   </head>
 
   <body>
@@ -455,71 +464,90 @@
               <!-- <ul class="contact_information_list"></ul> -->
 
               <!-- <h3 class="mb-4 form_heading">Please Fill in the Details Below</h3> -->
-              <div class="contact_form">
-                <form
-                  name="enquiryForm"
-                  method="POST"
-                  id="sendenqury"
-                  enctype="multipart/mixed"
-                  data-parsley-validate
-                >
-                  <div class="form_item">
-                    <span class="input_title">Full Name</span>
-                    <div class="position-relative">
-                      <input id="input_user" type="text" name="name" required />
-                      <label class="input_icon" for="input_user"
-                        ><i class="fal fa-user"></i
-                      ></label>
-                    </div>
-                  </div>
+         <div class="contact_form">
+  <form
+    name="enquiryForm"
+    method="POST"
+    id="sendenqury"
+    enctype="multipart/mixed"
+    data-parsley-validate
+  >
+    <div class="form_item">
+      <span class="input_title">Full Name</span>
+      <div class="position-relative">
+        <input
+          id="input_user"
+          type="text"
+          name="name"
+          data-parsley-pattern="^[a-zA-Z ]+$"
+          data-parsley-required="true"
+          data-parsley-required-message="Full Name is required."
+          data-parsley-pattern-message="Full Name must contain only alphabets and spaces."
+          required
+        />
+        <label class="input_icon" for="input_user"><i class="fal fa-user"></i></label>
+      </div>
+      <div id="nameError" class="error_message"></div>
+    </div>
 
-                  <div class="form_item">
-                    <span class="input_title">Email</span>
-                    <div class="position-relative">
-                      <input
-                        id="input_email"
-                        type="email"
-                        name="email"
-                        required
-                      />
-                      <label class="input_icon" for="input_email"
-                        ><i class="fal fa-envelope"></i
-                      ></label>
-                    </div>
-                  </div>
+    <div class="form_item">
+      <span class="input_title">Email</span>
+      <div class="position-relative">
+        <input
+          id="input_email"
+          type="email"
+          name="email"
+          data-parsley-type="email"
+          data-parsley-required="true"
+          data-parsley-required-message="Email is required."
+          data-parsley-type-message="Please enter a valid email (e.g., example@domain.com)."
+          required
+        />
+        <label class="input_icon" for="input_email"><i class="fal fa-envelope"></i></label>
+      </div>
+      <div id="emailError" class="error_message"></div>
+    </div>
 
-                  <div class="form_item">
-                    <span class="input_title">Contact Number</span>
-                    <div class="position-relative">
-                      <input
-                        id="input_phone"
-                        type="tel"
-                        name="contact_number"
-                        maxlength="10"
-                        onkeypress="return /[0-9-/]/i.test(event.key)"
-                        required
-                      />
-                      <label class="input_icon" for="input_phone"
-                        ><i class="fal fa-phone"></i
-                      ></label>
-                    </div>
-                  </div>
+    <div class="form_item">
+      <span class="input_title">Contact Number</span>
+      <div class="position-relative">
+        <input
+          id="input_phone"
+          type="tel"
+          name="contact_number"
+          data-parsley-pattern="^[6-9]\d{9}$"
+          data-parsley-required="true"
+          data-parsley-required-message="Contact Number is required."
+          data-parsley-pattern-message="Contact Number must be 10 digits starting with 6-9."
+          maxlength="10"
+          required
+        />
+        <label class="input_icon" for="input_phone"><i class="fal fa-phone"></i></label>
+      </div>
+      <div id="phoneError" class="error_message"></div>
+    </div>
 
-                  <div class="form_item">
-                    <span class="input_title">Message</span>
-                    <textarea name="message" required></textarea>
-                  </div>
+    <div class="form_item">
+      <span class="input_title">Message</span>
+      <textarea
+        id="input_message"
+        name="message"
+        data-parsley-minlength="5"
+        data-parsley-required="true"
+        data-parsley-required-message="Message is required."
+        data-parsley-minlength-message="Message must be at least 5 characters long."
+        required
+      ></textarea>
+      <div id="messageError" class="error_message"></div>
+    </div>
 
-                  <button type="submit" class="custom_btn bg_default_orange">
-                    Submit Now
-                    <span><i class="fal fa-arrow-right"></i></span>
-                  </button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    <button type="submit" class="custom_btn bg_default_orange">
+      Submit Now
+      <span><i class="fal fa-arrow-right"></i></span>
+    </button>
+  </form>
+</div>
+
       <!-- about_section - end
 				================================================== -->
 
@@ -537,9 +565,9 @@
                     <div tabindex="0" aria-label="Map" aria-roledescription="map" role="region"
                         aria-describedby="C64F7889-5662-44B3-85B6-AE0FD8918A59"
                         style="position: absolute; height: 100%; width: 100%; padding: 0px; border-width: 0px; margin: 0px; left: 0px; top: 0px;">
-                     
+                    
                     </div>
-               
+              
                 </div>
             </div>
         </div> -->
@@ -754,11 +782,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
               <div class="widget footer_contact_form">
                 <h3 class="footer_widget_title">Contact Us</h3>
-                <!-- <p class="mb_30">
-								<strong>B 137</strong> NSG SAS Ltd, P-6, Builders Area, <strong>Greater Noida</strong>,
-								Gautam Buddha Nagar, <strong>U.P :</strong> 201310 GS
 
-							</p> -->
 
                 <p class="mb_30">
                   <strong>1151 </strong> Walker Rd STE#100, Dover, Delaware,
@@ -776,8 +800,7 @@
                     </button>
                   </div>
                 </form>
-                <!-- <span class="footer_hotline"><i class="far fa-phone"></i> +91 9711308693</span> -->
-                <!-- <span class="footer_hotline"><i class="far fa-phone"></i> +1(815) 629-6893</span> -->
+      
                 <span class="footer_hotline"
                   ><i class="far fa-phone"></i>
                   <a href="tel:+18156296893" class="text-white"
@@ -1111,5 +1134,8 @@
     </script>
 
     <script src="//code.jivosite.com/widget/HZDT66Ya0l" async></script>
+
+ 
+
   </body>
 </html>
