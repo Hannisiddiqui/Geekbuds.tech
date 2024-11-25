@@ -134,7 +134,7 @@
 				o = 0;
 				clearInterval(fe);
 			}
-			document.body.style.opacity = o;
+			document.body.style.opacity = 1;
 		};
 	
 		const fe = setInterval(fo, i);
@@ -11052,7 +11052,7 @@
 					}).animate({
 						left: left + (show ? 0 : mx * width),
 						top: top + (show ? 0 : my * height),
-						opacity: show ? 1 : 0
+						opacity: show ? 1 : 1
 					}, o.duration || 500, o.easing, childComplete);
 			}
 		}
